@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://charcoaldiner.replit.app/sitemap.xml
