@@ -2,57 +2,81 @@ import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="py-20 bg-charcoal text-white">
+    <section id="contact" className="py-20 bg-charcoal text-foreground">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 items-center">
+          {/* Contact Info */}
           <div className="fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 font-inter">Visit Us Today</h2>
-            <p className="text-gray-300 text-lg mb-8">
-              Experience the authentic flavors of India at The Charcoal Diner. We're located in the heart of Khammam, ready to serve you the finest Indian cuisine.
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 font-inter">
+              Visit Us Today
+            </h2>
+
+            <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
+              Experience the bold, smoky flavors of India at{" "}
+              <strong className="text-foreground">The Charcoal Diner</strong> —
+              located in the heart of Khammam, right beside Reliance Smart.
             </p>
-            
+
             <div className="space-y-6">
-              <div className="flex items-center">
-                <MapPin className="text-burnt-orange text-xl mr-4" />
+              {/* Address */}
+              <div className="flex items-start">
+                <MapPin className="text-burnt-orange w-5 h-5 mr-4 mt-1" />
                 <div>
-                  <div className="font-semibold">Address</div>
-                  <div className="text-gray-300">123 Station Road, Wyra, Khammam, Telangana 507165</div>
+                  <div className="font-semibold text-foreground">Address</div>
+                  <p className="text-muted-foreground">
+                    Revathi Centre, Nehru Nagar<br />
+                    Landmark: Reliance Smart<br />
+                    Khammam – 507001, Telangana
+                  </p>
                 </div>
               </div>
-              
-              <div className="flex items-center">
-                <Phone className="text-burnt-orange text-xl mr-4" />
+
+              {/* Phone */}
+              <div className="flex items-start">
+                <Phone className="text-burnt-orange w-5 h-5 mr-4 mt-1" />
                 <div>
-                  <div className="font-semibold">Phone</div>
-                  <a href="tel:+918742234567" className="text-gray-300 hover:text-burnt-orange transition-colors">
-                    +91-8742-234567
+                  <div className="font-semibold text-foreground">Phone</div>
+                  <a
+                    href="tel:+917569031298"
+                    className="text-muted-foreground hover:text-burnt-orange transition-colors"
+                  >
+                    +91 75690 31298
                   </a>
                 </div>
               </div>
-              
-              <div className="flex items-center">
-                <Mail className="text-burnt-orange text-xl mr-4" />
+
+              {/* Email */}
+              <div className="flex items-start">
+                <Mail className="text-burnt-orange w-5 h-5 mr-4 mt-1" />
                 <div>
-                  <div className="font-semibold">Email</div>
-                  <a href="mailto:info@charcoaldiner.com" className="text-gray-300 hover:text-burnt-orange transition-colors">
-                    info@charcoaldiner.com
+                  <div className="font-semibold text-foreground">Email</div>
+                  <a
+                    href="mailto:charcoal.dinerr@gmail.com"
+                    className="text-muted-foreground hover:text-burnt-orange transition-colors"
+                  >
+                    charcoal.dinerr@gmail.com
                   </a>
                 </div>
               </div>
-              
-              <div className="flex items-center">
-                <Clock className="text-burnt-orange text-xl mr-4" />
+
+              {/* Hours */}
+              <div className="flex items-start">
+                <Clock className="text-burnt-orange w-5 h-5 mr-4 mt-1" />
                 <div>
-                  <div className="font-semibold">Opening Hours</div>
-                  <div className="text-gray-300">Daily: 11:00 AM - 11:00 PM</div>
+                  <div className="font-semibold text-foreground">Opening Hours</div>
+                  <p className="text-muted-foreground">
+                    Daily: 10:00 AM – 11:30 PM
+                  </p>
                 </div>
               </div>
             </div>
-            
-            <div className="mt-8 space-y-4">
-              <a 
-                href="https://wa.me/918742234567" 
-                className="block btn-primary text-white px-6 py-3 rounded-full font-dm-sans font-medium text-center"
+
+            {/* Action Buttons */}
+            <div className="mt-10 space-y-4">
+              {/* WhatsApp */}
+              <a
+                href="https://wa.me/917569031298"
+                className="block bg-burnt-orange text-charcoal px-6 py-3 rounded-full font-dm-sans font-medium text-center hover:bg-orange-400 transition-colors"
               >
                 <svg className="w-5 h-5 inline mr-2" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12.017 2.002c-5.514 0-9.985 4.472-9.985 9.985 0 1.765.459 3.422 1.263 4.853L2.002 22.002l5.177-1.285c1.383.744 2.965 1.166 4.666 1.166 5.514 0 9.985-4.472 9.985-9.985s-4.472-9.985-9.985-9.985zM12.017 20.336c-1.458 0-2.864-.377-4.076-1.096l-.293-.175-3.037.754.764-3.004-.191-.304c-.785-1.25-1.199-2.691-1.199-4.169 0-4.339 3.531-7.87 7.87-7.87s7.87 3.531 7.87 7.87-3.531 7.87-7.87 7.87z"/>
@@ -60,23 +84,26 @@ export default function ContactSection() {
                 </svg>
                 Order on WhatsApp
               </a>
-              <a 
-                href="tel:+918742234567" 
-                className="block bg-transparent border-2 border-white text-white px-6 py-3 rounded-full font-dm-sans font-medium text-center hover:bg-white hover:text-charcoal transition-all duration-300"
+
+              {/* Call */}
+              <a
+                href="tel:+917569031298"
+                className="block border-2 border-foreground text-foreground px-6 py-3 rounded-full font-dm-sans font-medium text-center hover:bg-white hover:text-charcoal transition-all duration-300"
               >
                 <Phone className="w-5 h-5 inline mr-2" />
                 Call for Reservations
               </a>
             </div>
           </div>
-          
+
+          {/* Map */}
           <div className="fade-in">
             <div className="bg-gray-800 rounded-2xl p-2 shadow-2xl">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3041.234567890123!2d80.15!3d17.25!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDE1JzAwLjAiTiA4MMKwMDknMDAuMCJF!5e0!3m2!1sen!2sin!4v1632123456789!5m2!1sen!2sin" 
-                width="100%" 
-                height="400" 
-                style={{border: 0, borderRadius: '12px'}}
+              <iframe
+                src="https://www.google.com/maps?q=revathi+centre+khammam&output=embed"
+                width="100%"
+                height="400"
+                style={{ border: 0, borderRadius: "12px" }}
                 allowFullScreen
                 loading="lazy"
                 className="rounded-xl"
